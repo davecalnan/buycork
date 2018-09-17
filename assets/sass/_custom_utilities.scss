@@ -1,0 +1,23 @@
+body {
+  scroll-behavior: smooth;
+}
+
+.bg-multiply {
+  background-blend-mode: multiply;
+}
+
+.bg-black-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-track {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}

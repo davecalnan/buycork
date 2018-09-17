@@ -1,0 +1,11 @@
+{
+  stores {
+    name
+    address
+    website
+    tags
+    image {
+      url
+    }
+  }
+}
