@@ -1,5 +1,7 @@
-{
-  posts {
+query post($slug: String!) {
+  post( where: {
+    slug: $slug
+  } ) { 
     title
     slug
     body

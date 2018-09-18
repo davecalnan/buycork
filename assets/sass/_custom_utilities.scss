@@ -21,3 +21,57 @@ body {
     display: none;
   }
 }
+
+a.navbar-link.nuxt-link-exact-active {
+  @apply border-b-2;
+}
+
+.article {
+  @apply font-serif;
+  @apply mx-auto;
+  width: 48em;
+  max-width: calc(100% - 2rem);
+
+  & > h1:not(:last-child) {
+    @apply text-xl;
+    @apply leading-tight;
+    @apply mb-5;
+  }
+
+  @screen md {
+    & > h1:not(:last-child) {
+      @apply text-2xl;
+    }
+    & > p, & > ol, & > ul {
+      @apply text-lg;
+    }
+  }
+  
+  & > p, & > ol, & > ul {
+    @apply leading-medium;
+  }
+
+  & > p:not(:last-child), & > ol:not(:last-child), & > ul:not(:last-child) {
+    @apply mb-6;
+  }
+}
+
+.bottom-border-on-hover::after {
+  @apply border-b-8;
+  @apply border-indigo;
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  display: block;
+  transition: transform .6s;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+#hero-box:hover {
+  &.bottom-border-on-hover::after {
+    transform: scaleX(1);
+  }
+}

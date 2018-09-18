@@ -1,19 +1,23 @@
 <template>
   <main>
+    <hero
+      bg-image="https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/3t4yux3ISOCBOGnNfy1n"
+      title="Find a store near you offering click-and-collect."
+    />
     <ais-index :search-store="searchStore" app-id="U7KOSDU8H5" api-key="14c5cd17da47c022078992567c75b658" index-name="dev_stores">
-      <section class="mb-8">
-        <div class="bg-white rounded md:h-48 md:w-screen-60 mx-4 md:mx-auto -mt-16 md:-mt-24 p-4 sm:p-8 md:py-0 shadow-lg flex flex-col justify-center">
-          <label for="search" class="mb-4 md:mb-6 text-xl md:text-3xl">
+      <section>
+        <hero-box class="shadow-lg rounded">
+          <h1 for="search" class="mt-2 md:mt-4 mb-4 md:mb-6 text-2xl md:text-3xl font-normal">
             Search by store name, type or city/town.
-          </label>
-          <div class="flex shadow-md">
+          </h1>
+          <div class="flex shadow-md mb-4 md:mb-8">
             <ais-input type="text" name="search" class="min-w-0 bg-grey-light rounded-l flex-grow p-2 md:p-3 lg:p-4"/>
             <button type="button" class="inline-block bg-indigo text-white uppercase p-2 md:p-3 lg:p-4 rounded-r">Search</button>
           </div>
-        </div>
+        </hero-box>
       </section>
-      <section class="p-4 md:p-8">
-        <ais-results class="sm:flex flex-wrap">
+      <section class="px-4 py-8 md:px-8">
+        <ais-results class="sm:flex flex-wrap items-stretch">
           <template slot-scope="{ result }">
             <store-preview :store="result"/>
           </template>
@@ -38,7 +42,7 @@
         </div>
       </div>
       <scroll-container>
-        <post-preview v-for="post in posts" :key="post" :post="post"/>
+        <post-preview v-for="post in posts" :key="post" :post="post" class="w-80 md:w-96 px-4 md:px-6 flex-no-shrink"/>
       </scroll-container>
     </section>
     <section class="bg-indigo text-white">
@@ -92,6 +96,8 @@ import allPosts from '~/apollo/queries/allPosts.gql'
 import allStores from '~/apollo/queries/allStores.gql'
 
 import buttonLink from '~/components/button-link.vue'
+import heroBox from '~/components/hero-box.vue'
+import hero from '~/components/hero.vue'
 import postPreview from '~/components/post-preview.vue'
 import scrollContainer from '~/components/scroll-container.vue'
 import storePreview from '~/components/store-preview.vue'
@@ -101,8 +107,11 @@ const searchStore = createFromAlgoliaCredentials('U7KOSDU8H5', '14c5cd17da47c022
 searchStore.indexName = 'dev_stores'
 
 export default {
+  layout: 'hero',
   components: {
     buttonLink,
+    hero,
+    heroBox,
     postPreview,
     scrollContainer,
     storePreview
@@ -134,8 +143,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
-

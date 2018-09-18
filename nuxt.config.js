@@ -1,4 +1,12 @@
-const nodeExternals = require('webpack-node-externals')
+const path = require('path')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const glob = require('glob-all')
+
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-z0-9-:/]+/g) || []
+  }
+}
 
 module.exports = {
   /*
@@ -23,9 +31,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    /*
-    ** Run ESLint on save
-    */
+    extractCSS: true,
+    postcss: [
+      require('tailwindcss')('./tailwind.js'),
+      require('autoprefixer')
+    ],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -35,6 +45,26 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      
+        config.plugins.push(
+          new PurgecssPlugin({
+            // purgecss configuration
+            // https://github.com/FullHuman/purgecss
+            paths: glob.sync([
+              path.join(__dirname, './pages/**/*.vue'),
+              path.join(__dirname, './layouts/**/*.vue'),
+              path.join(__dirname, './components/**/*.vue')
+            ]),
+            extractors: [
+              {
+                extractor: TailwindExtractor,
+                extensions: ['vue']
+              }
+            ],
+            whitelist: ['html', 'body', 'nuxt-progress']
+          })
+        )
+      
     }
   },
   css: [

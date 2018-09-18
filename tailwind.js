@@ -306,6 +306,7 @@ module.exports = {
     'none': 1,
     'tight': 1.25,
     'normal': 1.5,
+    'medium': 1.6,
     'loose': 2,
     'looser': 2.25,
   },
@@ -586,6 +587,7 @@ module.exports = {
   minHeight: {
     '0': '0',
     'full': '100%',
+    'screen-40': '40vh',
     'screen-50': '50vh',
     'screen': '100vh'
   },

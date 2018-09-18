@@ -19,10 +19,6 @@
         @click.native="scrollRight()"
       />
     </footer>
-    <h1 class="text-center">
-      <!-- Width: {{ scrollableLength() }}, Scroll: {{ scroll }} -->
-      <!-- {{ $refs.scrollable }} -->
-    </h1>
   </span>
 </template>
 
@@ -53,7 +49,6 @@ export default {
       this.scroll = this.$refs.scrollable.scrollLeft
     },
     scrollLeft: function () {
-      console.log('firing')
       ease({
         startValue: 0,
         endValue: 42,
@@ -61,7 +56,6 @@ export default {
       });
     },
     scrollRight: function () {
-      console.log('firing')
       ease({
         startValue: 0,
         endValue: 42,

@@ -24,7 +24,7 @@
         <p class="uppercase tracking-wide leading-looser">Navigation</p>
         <ul class="list-reset">
           <li class="my-4">
-            <a href="" class="no-underline text-grey-darkest">Home</a>
+            <nuxt-link to="/" class="no-underline text-grey-darkest">Home</nuxt-link>
           </li>
           <li class="my-4">
             <a href="" class="no-underline text-grey-darkest">Mission</a>

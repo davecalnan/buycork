@@ -1,6 +1,5 @@
 <template>
-  <main>
-    <navbar class="bg-blue-dark" background="dark"/>
+  <main class="border-t-4 border-indigo">
     <nuxt/>
     <foot/>
   </main>
@@ -11,12 +10,10 @@
 </style>
 
 <script>
-import navbar from '~/components/navbar.vue'
 import foot from '~/components/foot.vue'
 
 export default {
   components: {
-    navbar,
     foot
   }
 }
