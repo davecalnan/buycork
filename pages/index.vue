@@ -42,7 +42,7 @@
         </div>
       </div>
       <scroll-container>
-        <post-preview v-for="post in posts" :key="post" :post="post" class="w-80 md:w-96 px-4 md:px-6 flex-no-shrink"/>
+        <post-preview v-for="post in posts" :key="post.id" :post="post" class="w-80 md:w-96 px-4 md:px-6 flex-no-shrink"/>
       </scroll-container>
     </section>
     <section class="bg-indigo text-white">
