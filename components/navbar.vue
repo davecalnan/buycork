@@ -9,7 +9,7 @@
         to="/"
         class="text-2xl font-bold uppercase no-underline mb-4 md:mb-0"
       >
-        Clicks &amp; Mortar
+        BuyCork.ie
       </nuxt-link>
     </span>
     <span>
@@ -44,23 +44,11 @@
               'text-black': background === 'light',
               'text-white': background === 'dark'
             }"
-            to="/about"
+            to="/submit"
             class="navbar-link uppercase no-underline mr-4 md:mr-8 link-hover"
           >
-            About
+            Submit a Store
           </nuxt-link>
-        </li>
-        <li>
-          <a
-            :class="{
-              'text-black': background === 'light',
-              'text-white': background === 'dark'
-            }"
-            onclick="Intercom('showNewMessage')"
-            class="navbar-link uppercase no-underline cursor-pointer link-hover"
-          >
-            Contact
-          </a>
         </li>
       </ul>
     </span>

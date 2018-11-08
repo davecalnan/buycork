@@ -13,11 +13,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'clicksandmortar',
+    title: 'BuyCork.ie',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Resources for retailers to become more digital.' }
+      { hid: 'description', name: 'description', content: 'Buy local. Buy Cork.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

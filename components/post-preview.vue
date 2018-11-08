@@ -3,7 +3,7 @@
     <figure class="bg-white rounded shadow-lg">
       <header>
         <a :href="path">
-          <graphcms-image :image="post.image" :width="356" :height="200" class="w-full rounded-t border-b-4 border-indigo"/>
+          <graphcms-image :image="post.image" :width="356" :height="200" class="w-full rounded-t border-b-4 border-red"/>
         </a>
       </header>
       <main class="p-4">
@@ -36,10 +36,10 @@ export default {
     }
   },
   computed: {
-    path: function () {
+    path() {
       return '/blog/' + this.post.slug
     },
-    category: function () {
+    category() {
       return '/blog/category/' + this.post.category.toLowerCase()
     }
   }

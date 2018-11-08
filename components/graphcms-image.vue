@@ -21,7 +21,7 @@ export default {
     }
   },
   computed: {
-    urlWithTransformations: function () {
+    urlWithTransformations() {
       return baseUrl + 'resize=w:' + this.width + ',h:' + this.height + ',f:crop/compress/' + this.image.handle
     } 
   }

@@ -18,8 +18,8 @@
       </nuxt-link>
     </hero-box>
     <section class="px-4 py-8 md:px-8">
-      <div class="sm:flex flex-wrap items-stretch">
-        <post-preview v-for="post in posts" :key="post" :post="post" class="sm:w-1/2 md:w-1/3 pb-6 sm:p-2 md:p-4"/>
+      <div class="min-h-full sm:flex flex-wrap items-stretch">
+        <post-preview v-for="post in posts" :key="post" :post="post" class="sm:w-1/2 md:w-1/3 lg:w-1/4 pb-6 sm:p-2 md:p-4"/>
       </div>
     </section>
   </main>
@@ -42,17 +42,25 @@ export default {
   },
   data () {
     return {
-      post: {}
+      post: {
+        title: null,
+        slug: null,
+        readingTime: null,
+        category: null,
+        image: {
+          handle: null
+        }
+      }
     }
   },
   computed: {
-    category: function () {
+    category() {
       return '/blog/category/' + this.post.category.toLowerCase()
     },
-    image: function () {
+    image() {
       return 'https://media.graphcms.com/resize=w:1920,h:720,f:crop/compress/' + this.post.image.handle
     },
-    path: function () {
+    path() {
       return '/blog/' + this.post.slug
     }
   },

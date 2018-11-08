@@ -3,8 +3,8 @@
     v-if="nuxt"
     :to="href"
     :class="{
-      'bg-white text-indigo': type === 'standard',
-      'bg-indigo text-white': type === 'primary'
+      'bg-white text-black': type === 'standard',
+      'bg-red text-white': type === 'primary'
     }"
     class="inline-block w-auto uppercase no-underline tracking-wide p-2 rounded shadow-md"
   >
@@ -14,8 +14,8 @@
     v-else-if="href"
     :href="href"
     :class="{
-      'bg-white text-indigo': type === 'standard',
-      'bg-indigo text-white': type === 'primary'
+      'bg-white text-black': type === 'standard',
+      'bg-red text-white': type === 'primary'
     }"
     class="inline-block w-auto uppercase no-underline tracking-wide p-2 rounded shadow-md"
   >
@@ -24,8 +24,8 @@
   <button
     v-else-if="!href"
     :class="{
-      'bg-white text-indigo': type === 'standard',
-      'bg-indigo text-white': type === 'primary'
+      'bg-white text-black': type === 'standard',
+      'bg-red text-white': type === 'primary'
     }"
     class="uppercase no-underline tracking-wide p-2 rounded shadow-md"
     @click="launchIntercomMessage()"

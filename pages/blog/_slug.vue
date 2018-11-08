@@ -28,14 +28,28 @@ export default {
     navbar,
     VueMarkdown
   },
+  data () {
+    return {
+      post: {
+        title: null,
+        slug: null,
+        body: null,
+        readingTime: null,
+        category: null,
+        image: {
+          handle: null
+        }
+      }
+    }
+  },
   computed: {
-    category: function () {
+    category() {
       return '/blog/category/' + this.post.category.toLowerCase()
     },
-    image: function () {
+    image() {
       return 'https://media.graphcms.com/resize=w:1968,h:932,f:crop/compress/' + this.post.image.handle
     },
-    path: function () {
+    path() {
       return '/blog/' + this.post.slug
     }
   },

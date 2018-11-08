@@ -45,17 +45,17 @@ export default {
     this.$refs.scrollable.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    handleScroll: function () {
+    handleScroll() {
       this.scroll = this.$refs.scrollable.scrollLeft
     },
-    scrollLeft: function () {
+    scrollLeft() {
       ease({
         startValue: 0,
         endValue: 42,
         onStep: value => this.$refs.scrollable.scrollBy({ left: -value }),
       });
     },
-    scrollRight: function () {
+    scrollRight() {
       ease({
         startValue: 0,
         endValue: 42,

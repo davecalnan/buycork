@@ -1,5 +1,5 @@
 <template>
-  <main class="border-t-4 border-indigo">
+  <main class="border-t-4 border-red">
     <nuxt/>
     <foot/>
   </main>

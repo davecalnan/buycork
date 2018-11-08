@@ -59,7 +59,7 @@ a.navbar-link.nuxt-link-exact-active {
 
 .bottom-border-on-hover::after {
   @apply border-b-8;
-  @apply border-indigo;
+  @apply border-red;
   content: "";
   position: absolute;
   bottom: -8px;

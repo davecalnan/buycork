@@ -48,19 +48,28 @@ export default {
     navbar,
     postPreview
   },
-  data () {
+  data() {
     return {
-      post: {}
+      post: {
+        title: null,
+        slug: null,
+        body: null,
+        readingTime: null,
+        category: null,
+        image: {
+          handle: null
+        }
+      }
     }
   },
   computed: {
-    category: function () {
+    category() {
       return '/blog/category/' + this.post.category.toLowerCase()
     },
-    image: function () {
+    image() {
       return 'https://media.graphcms.com/resize=w:1920,h:720,f:crop/compress/' + this.post.image.handle
     },
-    path: function () {
+    path() {
       return '/blog/' + this.post.slug
     }
   },
@@ -73,7 +82,7 @@ export default {
       }
     }
   },
-  created () {
+  created() {
     this.post = this.posts.shift()
   }
 }
