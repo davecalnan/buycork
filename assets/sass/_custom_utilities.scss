@@ -48,6 +48,7 @@ a.navbar-link.nuxt-link-exact-active {
   }
   
   & > p, & > ol, & > ul {
+    @apply text-grey-darkest;
     @apply leading-medium;
   }
 
@@ -74,4 +75,9 @@ a.navbar-link.nuxt-link-exact-active {
   &.bottom-border-on-hover::after {
     transform: scaleX(1);
   }
+}
+
+.lift-on-hover:hover {
+  transition: transform .2s;
+  transform: translateY(-1px);
 }

@@ -5,7 +5,7 @@
       title="Find a store near you offering click-and-collect."
     />
     <ais-index :search-store="searchStore" app-id="U7KOSDU8H5" api-key="14c5cd17da47c022078992567c75b658" index-name="dev_stores">
-      <section>
+      <section class="p-4">
         <hero-box class="shadow-lg rounded">
           <h1 for="search" class="mt-2 md:mt-4 mb-4 md:mb-6 text-2xl md:text-3xl font-normal">
             Search by store name, type or city/town.
@@ -23,7 +23,7 @@
           </template>
         </ais-results>
         <div class="w-full flex">
-          <button-link type="standard" class="my-4 mx-auto">Load more stores</button-link>
+          <button-link type="standard" class="my-4 mx-auto lift-on-hover">Load more stores</button-link>
         </div>
       </section>
     </ais-index>

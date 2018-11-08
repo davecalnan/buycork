@@ -6,7 +6,7 @@
       'bg-white text-indigo': type === 'standard',
       'bg-indigo text-white': type === 'primary'
     }"
-    class="uppercase no-underline tracking-wide p-2 rounded shadow-md"
+    class="inline-block w-auto uppercase no-underline tracking-wide p-2 rounded shadow-md"
   >
     <slot/>
   </nuxt-link>
@@ -17,7 +17,7 @@
       'bg-white text-indigo': type === 'standard',
       'bg-indigo text-white': type === 'primary'
     }"
-    class="uppercase no-underline tracking-wide p-2 rounded shadow-md"
+    class="inline-block w-auto uppercase no-underline tracking-wide p-2 rounded shadow-md"
   >
     <slot/>
   </a>

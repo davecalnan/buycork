@@ -7,7 +7,7 @@
           'text-white': background === 'dark'
         }"
         to="/"
-        class="text-2xl font-bold font-serif uppercase no-underline mb-4 md:mb-0"
+        class="text-2xl font-bold uppercase no-underline mb-4 md:mb-0"
       >
         Clicks &amp; Mortar
       </nuxt-link>
@@ -21,7 +21,7 @@
               'text-white': background === 'dark'
             }"
             to="/"
-            class="navbar-link uppercase no-underline mr-4 md:mr-8"
+            class="navbar-link uppercase no-underline mr-4 md:mr-8 link-hover"
           >
             Home
           </nuxt-link>
@@ -33,7 +33,7 @@
               'text-white': background === 'dark'
             }"
             to="/blog"
-            class="navbar-link uppercase no-underline mr-4 md:mr-8"
+            class="navbar-link uppercase no-underline mr-4 md:mr-8 link-hover"
           >
             Blog
           </nuxt-link>
@@ -45,7 +45,7 @@
               'text-white': background === 'dark'
             }"
             to="/about"
-            class="navbar-link uppercase no-underline mr-4 md:mr-8"
+            class="navbar-link uppercase no-underline mr-4 md:mr-8 link-hover"
           >
             About
           </nuxt-link>
@@ -57,7 +57,7 @@
               'text-white': background === 'dark'
             }"
             onclick="Intercom('showNewMessage')"
-            class="navbar-link uppercase no-underline cursor-pointer"
+            class="navbar-link uppercase no-underline cursor-pointer link-hover"
           >
             Contact
           </a>

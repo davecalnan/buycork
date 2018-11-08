@@ -1,5 +1,5 @@
 <template>
-  <div class="sm:w-1/2 md:w-1/3 lg:w-1/4 pb-6 sm:p-2 md:p-4">
+  <div class="sm:w-1/2 md:w-1/3 xl:w-1/4 pb-6 sm:p-2 md:p-4">
     <figure class="h-full flex flex-col background-white rounded shadow-lg">
       <header>
         <graphcms-image :image="store.image" :width="356" :height="200" class="w-full rounded-t border-b-4 border-indigo"/>

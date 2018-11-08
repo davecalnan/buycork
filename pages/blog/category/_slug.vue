@@ -20,13 +20,21 @@
     <section class="px-4 py-8 md:px-8">
       <div class="sm:flex flex-wrap items-stretch">
         <post-preview v-for="post in posts" :key="post" :post="post" class="sm:w-1/2 md:w-1/3 pb-6 sm:p-2 md:p-4"/>
+        <div v-if="posts.length < 3" class="sm:w-1/2 md:w-1/3 pb-6 sm:p-2 md:p-4">
+          <figure class="bg-grey-lightest rounded shadow-lg h-full flex flex-col justify-center items-center p-4 text-center">
+            <h1 :href="path" class="block text-xl font-normal no-underline mb-2">No more posts to show.</h1>
+            <nuxt-link to="/blog" class="text-sm italic text-black p-2 -mx-2 rounded hover:bg-grey-lighter w-auto inline-block">
+              Back to the blog homepage &rarr;
+            </nuxt-link>
+          </figure>
+        </div>
       </div>
     </section>
   </main>
 </template>
 
 <script>
-import allPosts from '~/apollo/queries/allPosts.gql'
+import posts from '~/apollo/queries/posts.gql'
 
 import hero from '~/components/hero.vue'
 import heroBox from '~/components/hero-box.vue'
@@ -58,12 +66,15 @@ export default {
   },
   apollo: {
     posts: {
-      prefetch: true,
-      query: allPosts
+      query: posts,
+      prefetch: ({ route }) => ({ slug: route.params.slug.replace(/^\w/, c => c.toUpperCase()) }),
+      variables() {
+        return { slug: this.$route.params.slug.replace(/^\w/, c => c.toUpperCase()) }
+      }
     }
   },
   created () {
     this.post = this.posts.shift()
-  },
+  }
 }
 </script>

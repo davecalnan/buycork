@@ -27,13 +27,13 @@
             <nuxt-link to="/" class="no-underline text-grey-darkest">Home</nuxt-link>
           </li>
           <li class="my-4">
-            <a href="" class="no-underline text-grey-darkest">Mission</a>
+            <nuxt-link to="/blog" class="no-underline text-grey-darkest">Blog</nuxt-link>
           </li>
           <li class="my-4">
-            <a href="" class="no-underline text-grey-darkest">Contact</a>
+            <nuxt-link to="/about" class="no-underline text-grey-darkest">About</nuxt-link>
           </li>
           <li class="my-4">
-            <a href="" class="no-underline text-grey-darkest">Submit a Store</a>
+            <a to="" class="no-underline text-grey-darkest">Submit a Store</a>
           </li>
         </ul>
       </div>

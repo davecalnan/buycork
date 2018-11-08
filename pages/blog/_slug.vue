@@ -1,7 +1,9 @@
 <template>
   <main>
     <header class="text-center mx-4 my-10">
-      <p class="uppercase tracking-wide text-xs font-bold mb-2">{{ post.category }} | {{ post.readingTime }} min read</p>
+      <p class="uppercase tracking-wide text-xs font-bold mb-2 text-grey-darkest">
+        <a :href="category" class="text-grey-darkest no-underline">{{ post.category }}</a> | {{ post.readingTime }} min read
+      </p>
       <h1 class="block text-2xl md:text-5xl font-serif no-underline">
         {{ post.title }}
       </h1>
@@ -27,11 +29,14 @@ export default {
     VueMarkdown
   },
   computed: {
-    path: function () {
-      return '/blog/' + this.post.slug
+    category: function () {
+      return '/blog/category/' + this.post.category.toLowerCase()
     },
     image: function () {
       return 'https://media.graphcms.com/resize=w:1968,h:932,f:crop/compress/' + this.post.image.handle
+    },
+    path: function () {
+      return '/blog/' + this.post.slug
     }
   },
   apollo: {

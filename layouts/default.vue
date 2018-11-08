@@ -1,6 +1,6 @@
 <template>
   <main>
-    <navbar class="bg-blue-dark" background="dark"/>
+    <navbar class="bg-indigo" background="dark"/>
     <nuxt/>
     <foot/>
   </main>

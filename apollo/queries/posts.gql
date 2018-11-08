@@ -1,0 +1,14 @@
+query posts($slug: Category!) {
+  posts( where: {
+    category: $slug
+  } ) { 
+    title
+    slug
+    body
+    readingTime
+    category
+    image {
+      handle
+    }
+  }
+}
