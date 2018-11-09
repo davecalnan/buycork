@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-grey-light p-4 md:py-16">
+  <footer class="bg-grey-light p-8 md:py-16">
     <section class="md:flex mx-auto w-full max-w-lg">
       <div class="md:w-1/2 md:flex flex-col items-center pb-8 md:pb-0">
         <div>
@@ -33,9 +33,9 @@
             <!-- <li class="my-4">
               <nuxt-link to="/about" class="no-underline text-grey-darkest">About</nuxt-link>
             </li> -->
-            <li class="my-4">
+            <!-- <li class="my-4">
               <nuxt-link to="/submit" class="no-underline text-grey-darkest">Submit a Store</nuxt-link>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>

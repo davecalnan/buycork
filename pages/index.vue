@@ -22,9 +22,9 @@
             <store-preview :store="result"/>
           </template>
         </ais-results>
-        <div class="w-full flex">
+        <!-- <div class="w-full flex">
           <button-link type="standard" class="my-4 mx-auto lift-on-hover">Load more stores</button-link>
-        </div>
+        </div> -->
       </section>
     </ais-index>
     <section class="bg-grey-light">
@@ -32,7 +32,7 @@
         <svg class="h-96 flex-no-shrink text-grey-darker fill-current hidden md:inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16 2h4v15a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V0h16v2zm0 2v13a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4h-2zM2 2v15a1 1 0 0 0 1 1h11.17a2.98 2.98 0 0 1-.17-1V2H2zm2 8h8v2H4v-2zm0 4h8v2H4v-2zM4 4h8v4H4V4z"/></svg>
         <div class="pt-8 px-8 md:p-0 md:pt-12 md:pl-12 md:w-144">
           <div class="flex items-center mb-4">
-            <svg class="md:hidden h-24 mr-4 flex-no-shrink text-red fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16 2h4v15a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V0h16v2zm0 2v13a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4h-2zM2 2v15a1 1 0 0 0 1 1h11.17a2.98 2.98 0 0 1-.17-1V2H2zm2 8h8v2H4v-2zm0 4h8v2H4v-2zM4 4h8v4H4V4z"/></svg>
+            <svg class="md:hidden h-24 mr-4 flex-no-shrink text-grey-darker fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16 2h4v15a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V0h16v2zm0 2v13a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4h-2zM2 2v15a1 1 0 0 0 1 1h11.17a2.98 2.98 0 0 1-.17-1V2H2zm2 8h8v2H4v-2zm0 4h8v2H4v-2zM4 4h8v4H4V4z"/></svg>
             <nuxt-link to="/blog" class="font-serif text-black text-4xl no-underline">Our <br class="inline md:hidden">Blog &rarr;</nuxt-link>
           </div>
           <p class="text-black text-xl my-4">
@@ -103,8 +103,8 @@ import scrollContainer from '~/components/scroll-container.vue'
 import storePreview from '~/components/store-preview.vue'
 
 import { createFromAlgoliaCredentials, createFromSerialized } from 'vue-instantsearch'
-const searchStore = createFromAlgoliaCredentials('U7KOSDU8H5', '14c5cd17da47c022078992567c75b658')
-searchStore.indexName = 'dev_stores'
+const searchStore = createFromAlgoliaCredentials('L5CYV7NHZW', '3544b7f1069c8b34593fb10c9b1f6188')
+searchStore.indexName = 'prod_stores'
 
 export default {
   layout: 'hero',

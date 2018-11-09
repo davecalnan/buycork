@@ -35,7 +35,7 @@ export default {
         slug: null,
         body: null,
         readingTime: null,
-        category: null,
+        category: 'Category',
         image: {
           handle: null
         }

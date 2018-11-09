@@ -18,6 +18,7 @@
       'bg-red text-white': type === 'primary'
     }"
     class="inline-block w-auto uppercase no-underline tracking-wide p-2 rounded shadow-md"
+    target="_blank"
   >
     <slot/>
   </a>

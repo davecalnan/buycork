@@ -15,7 +15,7 @@
         <p class="text-grey-darker font-semibold text-sm">{{ store.address }}</p>
       </main>
       <footer class="bg-grey-lighter px-4 py-6">
-        <button-link :href="store.website" type="standard">Visit Site</button-link>
+        <button-link :href="store.website" type="standard" newtab>Visit Site</button-link>
       </footer>
     </figure>
   </div>

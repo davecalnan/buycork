@@ -38,7 +38,7 @@
             Blog
           </nuxt-link>
         </li>
-        <li>
+        <!-- <li>
           <nuxt-link
             :class="{
               'text-black': background === 'light',
@@ -49,7 +49,7 @@
           >
             Submit a Store
           </nuxt-link>
-        </li>
+        </li> -->
       </ul>
     </span>
   </nav>
