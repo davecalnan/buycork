@@ -26,7 +26,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#6574cd' },
+  loading: { color: '#e30613' },
   /*
   ** Build configuration
   */
@@ -66,6 +66,11 @@ module.exports = {
   css: [
     '~/assets/sass/style.scss'
   ],
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  },
   modules: [
     '@nuxtjs/apollo'
   ],
