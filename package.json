@@ -1,7 +1,7 @@
 {
-  "name": "clicksandmortar",
+  "name": "buycork",
   "version": "1.0.0",
-  "description": "Resources for retailers to become more digital.",
+  "description": "Find local alternatives.",
   "author": "Dave Calnan <d@ve.ie>",
   "private": true,
   "scripts": {
