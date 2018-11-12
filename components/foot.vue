@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-grey-light p-8 md:py-16">
     <section class="md:flex mx-auto w-full max-w-lg">
-      <div class="md:w-1/2 md:flex flex-col items-center pb-8 md:pb-0">
+      <div class="md:w-1/3 md:flex flex-col items-center pb-8 md:pb-0">
         <div>
           <h1 class="text-semibold font-serif">by 3xW</h1>
           <ul class="list-reset">
@@ -20,7 +20,7 @@
           </ul>
         </div>
       </div>
-      <div class="md:w-1/2 md:flex flex-col items-center pb-8 md:pb-0">
+      <div class="md:w-1/3 md:flex flex-col items-center pb-8 md:pb-0">
         <div>
           <p class="uppercase tracking-wide leading-looser">Navigation</p>
           <ul class="list-reset">
@@ -39,25 +39,22 @@
           </ul>
         </div>
       </div>
-      <!-- <div class="md:w-1/3 md:flex flex-col items-center">
+      <div class="md:w-1/3 md:flex flex-col items-center">
         <div>
-          <p class="uppercase tracking-wide leading-looser">Click &amp; Collect</p>
+          <p class="uppercase tracking-wide leading-looser">Find local alternatives</p>
           <ul class="list-reset">
             <li class="my-4">
-              <a href="" class="no-underline text-grey-darkest">Cork</a>
+              <nuxt-link to="/local-alternatives-to/starbucks" class="no-underline text-grey-darkest">Starbucks</nuxt-link>
             </li>
             <li class="my-4">
-              <a href="" class="no-underline text-grey-darkest">Dublin</a>
+              <nuxt-link to="/local-alternatives-to/specsavers" class="no-underline text-grey-darkest">Specsavers</nuxt-link>
             </li>
             <li class="my-4">
-              <a href="" class="no-underline text-grey-darkest">Galway</a>
-            </li>
-            <li class="my-4">
-              <a href="" class="no-underline text-grey-darkest">Limerick</a>
+              <nuxt-link to="/local-alternatives-to/costa" class="no-underline text-grey-darkest">Costa</nuxt-link>
             </li>
           </ul>
         </div>
-      </div> -->
+      </div>
     </section>
   </footer>
 </template>
