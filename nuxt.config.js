@@ -71,6 +71,13 @@ module.exports = {
       return { x: 0, y: 0 }
     }
   },
+  generate: {
+    routes: function () {
+      const staticRoutes = ['/local-alternatives-to/costa','/local-alternatives-to/specsavers', '/local-alternatives-to/starbucks']
+
+      return staticRoutes
+    }
+  },
   modules: [
     '@nuxtjs/apollo'
   ],
