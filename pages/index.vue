@@ -4,7 +4,7 @@
       bg-image="https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/3t4yux3ISOCBOGnNfy1n"
       title="Support independent businesses. Buy local. Buy Cork."
     />
-    <ais-index :search-store="searchStore" app-id="U7KOSDU8H5" api-key="14c5cd17da47c022078992567c75b658" index-name="dev_stores">
+    <ais-index :search-store="searchStore" app-id="U7KOSDU8H5" api-key="14c5cd17da47c022078992567c75b658" index-name="prod_stores">
       <section class="p-4">
         <hero-box class="shadow-lg rounded">
           <h1 for="search" class="mt-2 md:mt-4 mb-4 md:mb-6 text-2xl md:text-3xl font-normal">
