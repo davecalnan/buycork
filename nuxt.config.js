@@ -72,14 +72,23 @@ module.exports = {
     }
   },
   generate: {
-    routes: function () {
+    routes() {
       const staticRoutes = ['/local-alternatives-to/costa','/local-alternatives-to/specsavers', '/local-alternatives-to/starbucks']
 
       return staticRoutes
     }
   },
+  sitemap: {
+    hostname: 'https://buycork.ie',
+    routes() {
+      const staticRoutes = ['/local-alternatives-to/costa', '/local-alternatives-to/specsavers', '/local-alternatives-to/starbucks']
+
+      return staticRoutes
+    }
+  },
   modules: [
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/sitemap'
   ],
   plugins: [
     '~plugins/filters',
