@@ -9,10 +9,10 @@
         </div>
         <div class="text-xl text-grey-dark my-4">
           <p class="mb-4">
-            3xW Digital helps small businesses and freelancers grow.
+            3xW Digital helps small businesses get more done.
           </p>
           <p>
-            If you think you could do with some help growing your business online or bringing your customer experience to the next level, we’d love to work with you.
+            Nobody starts a business because they want to deal with admin. We automate processes so businesses can focus on what they do best.
           </p>
         </div>
         <button-link href="https://3xw.ie" type="standard">Visit site</button-link>

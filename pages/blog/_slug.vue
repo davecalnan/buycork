@@ -61,6 +61,11 @@ export default {
         return { slug: this.$route.params.slug }
       }
     }
+  },
+  head() {
+    return {
+      title: `${this.post.title} | BuyCork.ie`
+    }
   }
 }
 </script>

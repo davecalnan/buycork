@@ -1,7 +1,7 @@
 <template>
   <main>
     <hero
-      :title="`Don't go to ${alternative}, go here instead.`"
+      title="Buy Local. Buy Cork."
       bg-image="https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/WwLPXQIxRwqe7gAhYN2w"
     />
     <ais-index :search-store="searchStore" :query-parameters="queryParameters" app-id="U7KOSDU8H5" api-key="14c5cd17da47c022078992567c75b658" index-name="prod_stores">
@@ -82,6 +82,11 @@ export default {
     posts: {
       prefetch: true,
       query: allPosts
+    }
+  },
+  head() {
+    return {
+      title: `Local ${this.alternative} alternatives | BuyCork.ie`
     }
   }
 }

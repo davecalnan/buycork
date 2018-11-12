@@ -3,7 +3,7 @@
     <navbar background="dark"/>
     <h1
       v-if="title"
-      class="font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-white px-4 mx-auto max-w-lg mt-12 mb-24 md:mt-24 md:mb-32"
+      class="font-serif text-4xl sm:text-5xl md:text-5xl font-semibold text-white px-4 mx-auto max-w-lg mt-12 mb-24 md:mt-24 md:mb-32"
     >
       {{ title }}
     </h1>

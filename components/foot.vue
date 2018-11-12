@@ -15,7 +15,7 @@
               <a href="" class="invisible">Hi</a>
             </li> -->
             <li class="my-4">
-              <p class="no-underline text-grey-darkest">&copy; 3xW Digital Limited, 2018</p>
+              <p class="no-underline text-grey-darkest">&copy; 3xW Digital Ltd, 2018</p>
             </li>
           </ul>
         </div>

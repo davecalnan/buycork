@@ -73,5 +73,10 @@ export default {
   created () {
     this.post = this.posts.shift()
   },
+  head() {
+    return {
+      title: 'Blog | BuyCork.ie'
+    }
+  }
 }
 </script>
