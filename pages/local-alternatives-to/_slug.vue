@@ -76,7 +76,6 @@ export default {
   },
   created() {
     this.searchStore = createFromSerialized(this.serializedSearchStore)
-    console.log(this.queryParameters)
   },
   apollo: {
     posts: {

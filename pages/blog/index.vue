@@ -1,8 +1,8 @@
 <template>
   <main>
-    <a :href="path">
-      <img :src="image">
-    </a>
+    <hero
+      :bg-image="image"
+    />
     <hero-box :link="path" class="relative z-10 rounded-t md:-mt-32 bottom-border-on-hover">
       <p class="uppercase tracking-wide text-xs font-bold pt-2 text-grey-darkest">
         <a :href="category" class="text-grey-darkest no-underline">{{ post.category }}</a> | {{ post.readingTime }} min read
@@ -34,6 +34,7 @@ import navbar from '~/components/navbar.vue'
 import postPreview from '~/components/post-preview.vue'
 
 export default {
+  layout: 'hero',
   components: {
     hero,
     heroBox,

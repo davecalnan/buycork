@@ -1,10 +1,10 @@
 <template>
   <main>
     <hero
+      title="Buy Local. Buy Cork."
       bg-image="https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/3t4yux3ISOCBOGnNfy1n"
-      title="Buy local. Buy Cork."
     />
-    <ais-index :search-store="searchStore" app-id="U7KOSDU8H5" api-key="14c5cd17da47c022078992567c75b658" index-name="prod_stores">
+    <ais-index :search-store="searchStore" :query-parameters="{'page': page}" app-id="U7KOSDU8H5" api-key="14c5cd17da47c022078992567c75b658" index-name="prod_stores">
       <section class="p-4">
         <hero-box class="shadow-lg rounded">
           <h1 for="search" class="md:mt-4 mb-4 md:mb-6 text-2xl md:text-3xl font-normal">
@@ -17,14 +17,15 @@
         </hero-box>
       </section>
       <section class="px-4 py-8 md:px-8">
-        <ais-results class="sm:flex flex-wrap items-stretch">
+        <ais-results :results-per-page="4" :stack="true" class="sm:flex flex-wrap items-stretch">
           <template slot-scope="{ result }">
             <store-preview :store="result"/>
           </template>
         </ais-results>
-        <!-- <div class="w-full flex">
-          <button-link type="standard" class="my-4 mx-auto lift-on-hover">Load more stores</button-link>
-        </div> -->
+        <div class="w-full flex">
+          <!-- <ais-pagination :padding="5"/> -->
+          <button-link type="standard" class="my-4 mx-auto lift-on-hover" @click.native="loadMore()">Load more stores</button-link>
+        </div>
       </section>
     </ais-index>
     <section class="bg-grey-light">
@@ -101,6 +102,7 @@ export default {
   },
   data() {
     return {
+      page: 1,
       searchStore: null
     }
   },
@@ -116,6 +118,11 @@ export default {
   head() {
     return {
       title: 'Find local alternatives | BuyCork.ie'
+    }
+  },
+  methods: {
+    loadMore() {
+      return this.page++
     }
   }
 }
