@@ -1,17 +1,17 @@
 <template>
   <main>
     <hero
-      bg-image="https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/3t4yux3ISOCBOGnNfy1n"
-      title="Support independent businesses. Buy local. Buy Cork."
+      :title="`Don't go to ${alternative}, go here instead.`"
+      bg-image="https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/WwLPXQIxRwqe7gAhYN2w"
     />
-    <ais-index :search-store="searchStore" app-id="U7KOSDU8H5" api-key="14c5cd17da47c022078992567c75b658" index-name="prod_stores">
+    <ais-index :search-store="searchStore" :query-parameters="queryParameters" app-id="U7KOSDU8H5" api-key="14c5cd17da47c022078992567c75b658" index-name="prod_stores">
       <section class="p-4">
         <hero-box class="shadow-lg rounded">
           <h1 for="search" class="mt-2 md:mt-4 mb-4 md:mb-6 text-2xl md:text-3xl font-normal">
-            Find local alternatives to chains and bigger brands.
+            Find local alternatives to {{ alternative }}.
           </h1>
           <div class="flex shadow-md mb-4 md:mb-8">
-            <ais-input type="text" name="search" placeholder="I'm looking for..." class="min-w-0 bg-grey-light rounded-l flex-grow p-2 md:p-3 lg:p-4"/>
+            <ais-input type="text" name="search" placeholder="" class="min-w-0 bg-grey-light rounded-l flex-grow p-2 md:p-3 lg:p-4"/>
             <button type="button" class="inline-block bg-red text-white text-bold uppercase tracking-wide p-2 md:p-3 lg:p-4 rounded-r">Search</button>
           </div>
         </hero-box>
@@ -94,18 +94,27 @@ export default {
   },
   async asyncData() {
     searchStore.start()
-    searchStore.refresh()
-    await searchStore.waitUntilInSync()
+    // searchStore.refresh()
+    // await searchStore.waitUntilInSync()
 
     return { serializedSearchStore: searchStore.serialize() }
   },
   data() {
     return {
-      searchStore: null
+      searchStore: null,
+      queryParameters: {
+        facetFilters: `alternativeTo.name:${this.$route.params.slug}`
+      }
+    }
+  },
+  computed: {
+    alternative() {
+      return this.$route.params.slug.charAt(0).toUpperCase() + this.$route.params.slug.slice(1)
     }
   },
   created() {
     this.searchStore = createFromSerialized(this.serializedSearchStore)
+    console.log(this.queryParameters)
   },
   apollo: {
     posts: {
