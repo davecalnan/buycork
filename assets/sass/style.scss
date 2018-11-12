@@ -12,6 +12,7 @@
 @tailwind preflight;
 
 html, body {
+  @apply antialiased;
   @apply font-sans;
 }
 
