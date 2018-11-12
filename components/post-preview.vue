@@ -2,15 +2,15 @@
   <div>
     <figure class="bg-white rounded shadow-lg">
       <header>
-        <nuxt-link :href="path">
+        <nuxt-link :to="path">
           <graphcms-image :image="post.image" :width="356" :height="200" class="w-full rounded-t border-b-4 border-red"/>
         </nuxt-link>
       </header>
       <main class="p-4">
         <p class="uppercase tracking-wide text-xs font-bold text-grey-darkest">
-          <nuxt-link :href="category" class="text-grey-darkest no-underline">{{ post.category }}</nuxt-link> | {{ post.readingTime }} min read
+          <nuxt-link :to="category" class="text-grey-darkest no-underline">{{ post.category }}</nuxt-link> | {{ post.readingTime }} min read
         </p>
-        <nuxt-link :href="path" class="block text-2xl text-black no-underline my-2 font-serif">{{ post.title }}</nuxt-link>
+        <nuxt-link :to="path" class="block text-2xl text-black no-underline my-2 font-serif">{{ post.title }}</nuxt-link>
         <p class="mt-4 mb-2 font-serif text-grey-darkest">
           {{ post.body | truncate(115, '...') }}
         </p>
