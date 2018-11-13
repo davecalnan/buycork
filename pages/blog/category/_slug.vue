@@ -84,6 +84,16 @@ export default {
   },
   created() {
     this.post = this.posts.shift()
+  },
+  head() {
+    return {
+      title: `${this.$route.params.slug.replace(/^\w/, c => c.toUpperCase())} Blog | BuyCork.ie`,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: `Read about ${this.$route.params.slug} on the BuyCork.ie blog.` }
+      ]
+    }
   }
 }
 </script>

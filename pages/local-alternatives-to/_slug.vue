@@ -85,7 +85,12 @@ export default {
   },
   head() {
     return {
-      title: `Local ${this.alternative} alternatives | BuyCork.ie`
+      title: `Local ${this.alternative} alternatives | BuyCork.ie`,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: `Support local businesses. Find alternatives to ${this.alternative} on the BuyCork.ie.` }
+      ]
     }
   }
 }

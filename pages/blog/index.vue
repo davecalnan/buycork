@@ -74,10 +74,13 @@ export default {
   created () {
     this.post = this.posts.shift()
   },
-  head() {
-    return {
-      title: 'Blog | BuyCork.ie'
-    }
+  head: {
+    title: 'Blog | BuyCork.ie',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: "Independent businesses need your support now more than ever. Out blog shares how and why to support them along with sharing their stories." }
+    ]
   }
 }
 </script>
