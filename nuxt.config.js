@@ -72,11 +72,8 @@ module.exports = {
     }
   },
   generate: {
-    routes() {
-      const staticRoutes = ['/local-alternatives-to/costa','/local-alternatives-to/specsavers', '/local-alternatives-to/starbucks']
-
-      return staticRoutes
-    }
+    routes: ['/local-alternatives-to/costa','/local-alternatives-to/specsavers', '/local-alternatives-to/starbucks'],
+    subFolders: false
   },
   sitemap: {
     generate: true,
