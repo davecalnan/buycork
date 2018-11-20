@@ -66,6 +66,24 @@ export default {
     return {
       title: `${this.post.title} | BuyCork.ie`
     }
+  },
+  head() {
+    return {
+      title: `${this.post.title} | BuyCork.ie`,
+      meta: [
+        { hid: 'description', name: 'description', content: 'Support independent businesses by finding local alternatives to chains and bigger brands. Buy Local. Buy Cork.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: `https://buycork.ie/blog/${this.$route.params.slug}` },
+        { property: 'og:title', content: `${this.post.title} | BuyCork.ie` },
+        { property: 'og:description', content: 'Support independent businesses by finding local alternatives to chains and bigger brands. Buy Local. Buy Cork.' },
+        { property: 'og:image', content: this.image },
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:url', content: `https://buycork.ie/blog/${this.$route.params.slug}` },
+        { property: 'twitter:title', content: `${this.post.title} | BuyCork.ie` },
+        { property: 'twitter:description', content: 'Support independent businesses by finding local alternatives to chains and bigger brands. Buy Local. Buy Cork.' },
+        { property: 'twitter:image', content: this.image }
+      ]
+    }
   }
 }
 </script>

@@ -11,7 +11,7 @@
             Find local alternatives to chains and bigger brands.
           </h1>
           <div class="flex shadow-md mb-4 md:mb-8">
-            <ais-input type="text" name="search" placeholder="I'm looking for..." class="min-w-0 bg-grey-light rounded-l flex-grow p-2 md:p-3 lg:p-4"/>
+            <ais-input type="text" name="search" placeholder="I'm looking for..." class="min-w-0 bg-grey-light rounded-l flex-grow p-2 md:p-3 lg:p-4" @keyup="console.log(page)"/>
             <button type="button" class="inline-block bg-red text-white text-bold uppercase tracking-wide p-2 md:p-3 lg:p-4 rounded-r">Search</button>
           </div>
         </hero-box>
@@ -22,9 +22,10 @@
             <store-preview :store="result"/>
           </template>
         </ais-results>
-        <div class="w-full flex">
+        <div class="w-full flex flex-col md:flex-row justify-center items-center">
           <!-- <ais-pagination :padding="5"/> -->
-          <button-link type="standard" class="my-4 mx-auto lift-on-hover" @click.native="loadMore()">Load more stores</button-link>
+          <button-link type="standard" class="my-4 mx-auto md:ml-0 md:mr-4 lift-on-hover" @click.native="loadMore()">Load more stores</button-link>
+          <button-link href="https://davecalnan.typeform.com/to/NaZY4J" type="primary" class="mx-auto md:mx-0 mb-4 md:mb-0 lift-on-hover">Submit a Store</button-link>
         </div>
       </section>
     </ais-index>
@@ -106,6 +107,11 @@ export default {
       searchStore: null
     }
   },
+  watch: {
+    'searchStore.query'(newQuery, oldQuery) {
+      this.page = 1
+    }
+  },
   created() {
     this.searchStore = createFromSerialized(this.serializedSearchStore)
   },
@@ -115,14 +121,27 @@ export default {
       query: allPosts
     }
   },
-  head() {
-    return {
-      title: 'Find local alternatives | BuyCork.ie'
-    }
-  },
   methods: {
     loadMore() {
       return this.page++
+    }
+  },
+  head() {
+    return {
+      title: 'Find local alternatives | BuyCork.ie',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Support independent businesses by finding local alternatives to chains and bigger brands. Buy Local. Buy Cork.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://buycork.ie' },
+        { property: 'og:title', content: 'Find local alternatives | BuyCork.ie' },
+        { property: 'og:description', content: 'Support independent businesses by finding local alternatives to chains and bigger brands. Buy Local. Buy Cork.' },
+        { property: 'og:image', content: 'https://media.graphcms.com/resize=w:1968,h:932,f:crop/compress/TxAEoeATmWVPZeQguMtN' },
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:url', content: 'https://buycork.ie' },
+        { property: 'twitter:title', content: 'Find local alternatives | BuyCork.ie' },
+        { property: 'twitter:description', content: 'Support independent businesses by finding local alternatives to chains and bigger brands. Buy Local. Buy Cork.' },
+        { property: 'twitter:image', content: 'https://media.graphcms.com/resize=w:1968,h:932,f:crop/compress/TxAEoeATmWVPZeQguMtN' }
+      ]
     }
   }
 }

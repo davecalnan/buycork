@@ -9,7 +9,7 @@
         </div>
         <div class="text-xl text-grey-dark my-4">
           <p class="mb-4">
-            3xW Digital helps small businesses get more done.
+            3xW helps small businesses get more done.
           </p>
           <p>
             Nobody starts a business because they want to deal with admin. We automate processes so businesses can focus on what they do best.

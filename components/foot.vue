@@ -33,9 +33,9 @@
             <!-- <li class="my-4">
               <nuxt-link to="/about" class="no-underline text-grey-darkest">About</nuxt-link>
             </li> -->
-            <!-- <li class="my-4">
-              <nuxt-link to="/submit" class="no-underline text-grey-darkest">Submit a Store</nuxt-link>
-            </li> -->
+            <li class="my-4">
+              <a href="https://davecalnan.typeform.com/to/NaZY4J" target="_blank" class="no-underline text-grey-darkest">Submit a Store</a>
+            </li>
           </ul>
         </div>
       </div>

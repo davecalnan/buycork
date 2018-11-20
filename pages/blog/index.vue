@@ -3,7 +3,7 @@
     <hero
       :bg-image="image"
     />
-    <hero-box :link="path" class="relative z-10 rounded-t md:-mt-32 bottom-border-on-hover">
+    <hero-box :link="path" class="relative mx-4 z-10 rounded-t md:-mt-32 bottom-border-on-hover">
       <p class="uppercase tracking-wide text-xs font-bold pt-2 text-grey-darkest">
         <a :href="category" class="text-grey-darkest no-underline">{{ post.category }}</a> | {{ post.readingTime }} min read
       </p>
@@ -17,11 +17,11 @@
         Read more &rarr;
       </nuxt-link>
     </hero-box>
-    <section class="px-4 py-8 md:px-8">
+    <!-- <section class="px-4 py-8 md:px-8">
       <div class="min-h-full sm:flex flex-wrap items-stretch">
         <post-preview v-for="post in posts" :key="post" :post="post" class="sm:w-1/2 md:w-1/3 lg:w-1/4 pb-6 sm:p-2 md:p-4"/>
       </div>
-    </section>
+    </section> -->
   </main>
 </template>
 
@@ -72,15 +72,25 @@ export default {
     }
   },
   created () {
-    this.post = this.posts.shift()
+    this.post = this.posts[0]
   },
-  head: {
-    title: 'Blog | BuyCork.ie',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: "Independent businesses need your support now more than ever. Out blog shares how and why to support them along with sharing their stories." }
-    ]
+  head() {
+    return {
+      title: 'Blog | BuyCork.ie',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Independent businesses need your support now more than ever. Our blog shares how and why to support them along with sharing their stories.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://buycork.ie/blog/' },
+        { property: 'og:title', content: 'Blog | BuyCork.ie' },
+        { property: 'og:description', content: 'Independent businesses need your support now more than ever. Our blog shares how and why to support them along with sharing their stories.' },
+        { property: 'og:image', content: 'https://media.graphcms.com/resize=w:1968,h:932,f:crop/compress/TxAEoeATmWVPZeQguMtN' },
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:url', content: 'https://buycork.ie/blog/' },
+        { property: 'twitter:title', content: 'Blog | BuyCork.ie' },
+        { property: 'twitter:description', content: 'Independent businesses need your support now more than ever. Our blog shares how and why to support them along with sharing their stories.' },
+        { property: 'twitter:image', content: 'https://media.graphcms.com/resize=w:1968,h:932,f:crop/compress/TxAEoeATmWVPZeQguMtN' }
+      ]
+    }
   }
 }
 </script>

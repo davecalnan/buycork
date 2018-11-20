@@ -72,7 +72,7 @@ module.exports = {
     }
   },
   generate: {
-    routes: ['/local-alternatives-to/costa','/local-alternatives-to/specsavers', '/local-alternatives-to/starbucks'],
+    routes: ['/blog/welcome', '/blog/buycork', '/local-alternatives-to/costa','/local-alternatives-to/specsavers', '/local-alternatives-to/starbucks'],
     subFolders: false
   },
   sitemap: {

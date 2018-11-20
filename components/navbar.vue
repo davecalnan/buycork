@@ -38,18 +38,19 @@
             Blog
           </nuxt-link>
         </li>
-        <!-- <li>
-          <nuxt-link
+        <li>
+          <a
             :class="{
               'text-black': background === 'light',
               'text-white': background === 'dark'
             }"
-            to="/submit"
+            href="https://davecalnan.typeform.com/to/NaZY4J"
+            target="_blank"
             class="navbar-link uppercase no-underline mr-4 md:mr-8 link-hover"
           >
             Submit a Store
-          </nuxt-link>
-        </li> -->
+          </a>
+        </li>
       </ul>
     </span>
   </nav>

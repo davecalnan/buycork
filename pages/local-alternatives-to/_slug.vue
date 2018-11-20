@@ -1,8 +1,8 @@
 <template>
   <main>
     <hero
+      :bg-image="bgImage"
       title="Buy Local. Buy Cork."
-      bg-image="https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/WwLPXQIxRwqe7gAhYN2w"
     />
     <ais-index :search-store="searchStore" :query-parameters="queryParameters" app-id="U7KOSDU8H5" api-key="14c5cd17da47c022078992567c75b658" index-name="prod_stores">
       <section class="p-4">
@@ -31,8 +31,6 @@
 </template>
 
 <script>
-import allPosts from '~/apollo/queries/allPosts.gql'
-
 import buttonLink from '~/components/button-link.vue'
 import heroBox from '~/components/hero-box.vue'
 import hero from '~/components/hero.vue'
@@ -72,24 +70,36 @@ export default {
   computed: {
     alternative() {
       return this.$route.params.slug.charAt(0).toUpperCase() + this.$route.params.slug.slice(1)
+    },
+    bgImage() {
+      if (this.$route.params.slug === 'costa') return 'https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/XE1xKteoT2KlcnJnt4qw'
+      if (this.$route.params.slug === 'specsavers') return 'https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/Q6rguyQSPmzn4YyvY76o'
+      if (this.$route.params.slug === 'starbucks') return 'https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/WwLPXQIxRwqe7gAhYN2w'
+    }
+  },
+  watch: {
+    'searchStore.query'(newQuery, oldQuery) {
+      this.page = 1
     }
   },
   created() {
     this.searchStore = createFromSerialized(this.serializedSearchStore)
   },
-  apollo: {
-    posts: {
-      prefetch: true,
-      query: allPosts
-    }
-  },
   head() {
     return {
       title: `Local ${this.alternative} alternatives | BuyCork.ie`,
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: `Support local businesses. Find alternatives to ${this.alternative} on the BuyCork.ie.` }
+        { hid: 'description', name: 'description', content: `Support local businesses. Find alternatives to ${this.alternative} on the BuyCork.ie.` },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: `https://buycork.ie/local-alternatives-to/${this.$route.params.slug}` },
+        { property: 'og:title', content: `Local ${this.alternative} alternatives | BuyCork.ie` },
+        { property: 'og:description', content: `Support local businesses. Find alternatives to ${this.alternative} on the BuyCork.ie.` },
+        { property: 'og:image', content: this.bgImage },
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:url', content: `https://buycork.ie/local-alternatives-to/${this.$route.params.slug}` },
+        { property: 'twitter:title', content: `Local ${this.alternative} alternatives | BuyCork.ie` },
+        { property: 'twitter:description', content: `Support local businesses. Find alternatives to ${this.alternative} on the BuyCork.ie.` },
+        { property: 'twitter:image', content: this.bgImage }
       ]
     }
   }

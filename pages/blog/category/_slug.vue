@@ -89,9 +89,17 @@ export default {
     return {
       title: `${this.$route.params.slug.replace(/^\w/, c => c.toUpperCase())} Blog | BuyCork.ie`,
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: `Read about ${this.$route.params.slug} on the BuyCork.ie blog.` }
+        { hid: 'description', name: 'description', content: `Read about ${this.$route.params.slug} on the BuyCork.ie blog.` },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: `https://buycork.ie/blog/${this.$route.params.slug}` },
+        { property: 'og:title', content: `${this.$route.params.slug.replace(/^\w/, c => c.toUpperCase())} Blog | BuyCork.ie` },
+        { property: 'og:description', content: `Read about ${this.$route.params.slug} on the BuyCork.ie blog.` },
+        { property: 'og:image', content: 'https://media.graphcms.com/resize=w:1968,h:932,f:crop/compress/TxAEoeATmWVPZeQguMtN' },
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:url', content: `https://buycork.ie/blog/${this.$route.params.slug}` },
+        { property: 'twitter:title', content: `${this.$route.params.slug.replace(/^\w/, c => c.toUpperCase())} Blog | BuyCork.ie` },
+        { property: 'twitter:description', content: `Read about ${this.$route.params.slug} on the BuyCork.ie blog.` },
+        { property: 'twitter:image', content: 'https://media.graphcms.com/resize=w:1968,h:932,f:crop/compress/TxAEoeATmWVPZeQguMtN' }
       ]
     }
   }
