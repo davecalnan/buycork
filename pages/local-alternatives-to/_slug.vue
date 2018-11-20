@@ -72,9 +72,9 @@ export default {
       return this.$route.params.slug.charAt(0).toUpperCase() + this.$route.params.slug.slice(1)
     },
     bgImage() {
-      if (this.$route.params.slug === 'costa') return 'https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/XE1xKteoT2KlcnJnt4qw'
-      if (this.$route.params.slug === 'specsavers') return 'https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/Q6rguyQSPmzn4YyvY76o'
-      if (this.$route.params.slug === 'starbucks') return 'https://media.graphcms.com/resize=w:1920,h:640,f:crop/compress/WwLPXQIxRwqe7gAhYN2w'
+      if (this.$route.params.slug === 'costa') return '/img/costa.jpg'
+      if (this.$route.params.slug === 'specsavers') return '/img/specsavers.jpg'
+      if (this.$route.params.slug === 'starbucks') return '/image/starbucks.jpg'
     }
   },
   watch: {

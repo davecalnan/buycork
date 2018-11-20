@@ -135,12 +135,12 @@ export default {
         { property: 'og:url', content: 'https://buycork.ie' },
         { property: 'og:title', content: 'Find local alternatives | BuyCork.ie' },
         { property: 'og:description', content: 'Support independent businesses by finding local alternatives to chains and bigger brands. Buy Local. Buy Cork.' },
-        { property: 'og:image', content: 'https://media.graphcms.com/resize=w:1968,h:932,f:crop/compress/TxAEoeATmWVPZeQguMtN' },
+        { property: 'og:image', content: '/img/cork-city.jpg' },
         { property: 'twitter:card', content: 'summary_large_image' },
         { property: 'twitter:url', content: 'https://buycork.ie' },
         { property: 'twitter:title', content: 'Find local alternatives | BuyCork.ie' },
         { property: 'twitter:description', content: 'Support independent businesses by finding local alternatives to chains and bigger brands. Buy Local. Buy Cork.' },
-        { property: 'twitter:image', content: 'https://media.graphcms.com/resize=w:1968,h:932,f:crop/compress/TxAEoeATmWVPZeQguMtN' }
+        { property: 'twitter:image', content: '/img/cork-city.jpg' }
       ]
     }
   }
