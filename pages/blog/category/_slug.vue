@@ -94,12 +94,12 @@ export default {
         { property: 'og:url', content: `https://buycork.ie/blog/${this.$route.params.slug}` },
         { property: 'og:title', content: `${this.$route.params.slug.replace(/^\w/, c => c.toUpperCase())} Blog | BuyCork.ie` },
         { property: 'og:description', content: `Read about ${this.$route.params.slug} on the BuyCork.ie blog.` },
-        { property: 'og:image', content: '/img/cork-city.jpg' },
+        { property: 'og:image', content: 'https://buycork.ie/img/cork-city.jpgcork-city.jpg' },
         { property: 'twitter:card', content: 'summary_large_image' },
         { property: 'twitter:url', content: `https://buycork.ie/blog/${this.$route.params.slug}` },
         { property: 'twitter:title', content: `${this.$route.params.slug.replace(/^\w/, c => c.toUpperCase())} Blog | BuyCork.ie` },
         { property: 'twitter:description', content: `Read about ${this.$route.params.slug} on the BuyCork.ie blog.` },
-        { property: 'twitter:image', content: '/img/cork-city.jpg' }
+        { property: 'twitter:image', content: 'https://buycork.ie/img/cork-city.jpgcork-city.jpg' }
       ]
     }
   }

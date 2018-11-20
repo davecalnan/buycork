@@ -83,12 +83,12 @@ export default {
         { property: 'og:url', content: 'https://buycork.ie/blog/' },
         { property: 'og:title', content: 'Blog | BuyCork.ie' },
         { property: 'og:description', content: 'Independent businesses need your support now more than ever. Our blog shares how and why to support them along with sharing their stories.' },
-        { property: 'og:image', content: '/img/cork-city.jpg' },
+        { property: 'og:image', content: 'https://buycork.ie/img/cork-city.jpgcork-city.jpg' },
         { property: 'twitter:card', content: 'summary_large_image' },
         { property: 'twitter:url', content: 'https://buycork.ie/blog/' },
         { property: 'twitter:title', content: 'Blog | BuyCork.ie' },
         { property: 'twitter:description', content: 'Independent businesses need your support now more than ever. Our blog shares how and why to support them along with sharing their stories.' },
-        { property: 'twitter:image', content: '/img/cork-city.jpg' }
+        { property: 'twitter:image', content: 'https://buycork.ie/img/cork-city.jpgcork-city.jpg' }
       ]
     }
   }

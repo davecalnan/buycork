@@ -72,8 +72,8 @@ export default {
       return this.$route.params.slug.charAt(0).toUpperCase() + this.$route.params.slug.slice(1)
     },
     bgImage() {
-      if (this.$route.params.slug === 'costa') return '/img/costa.jpg'
-      if (this.$route.params.slug === 'specsavers') return '/img/specsavers.jpg'
+      if (this.$route.params.slug === 'costa') return 'https://buycork.ie/img/cork-city.jpgcosta.jpg'
+      if (this.$route.params.slug === 'specsavers') return 'https://buycork.ie/img/cork-city.jpgspecsavers.jpg'
       if (this.$route.params.slug === 'starbucks') return '/image/starbucks.jpg'
     }
   },
