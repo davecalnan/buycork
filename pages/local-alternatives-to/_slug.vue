@@ -72,9 +72,9 @@ export default {
       return this.$route.params.slug.charAt(0).toUpperCase() + this.$route.params.slug.slice(1)
     },
     bgImage() {
-      if (this.$route.params.slug === 'costa') return 'https://buycork.ie/img/cork-city.jpgcosta.jpg'
-      if (this.$route.params.slug === 'specsavers') return 'https://buycork.ie/img/cork-city.jpgspecsavers.jpg'
-      if (this.$route.params.slug === 'starbucks') return '/image/starbucks.jpg'
+      if (this.$route.params.slug === 'costa') return 'https://buycork.ie/img/costa.jpg'
+      if (this.$route.params.slug === 'specsavers') return 'https://buycork.ie/img/specsavers.jpg'
+      if (this.$route.params.slug === 'starbucks') return 'https://buycork.ie/img/starbucks.jpg'
     }
   },
   watch: {
