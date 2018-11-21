@@ -11,13 +11,13 @@
             Find local alternatives to chains and bigger brands.
           </h1>
           <div class="flex shadow-md mb-4 md:mb-8">
-            <ais-input type="text" name="search" placeholder="I'm looking for..." class="min-w-0 bg-grey-light rounded-l flex-grow p-2 md:p-3 lg:p-4" @keyup="console.log(page)"/>
+            <ais-input type="text" name="search" placeholder="I'm looking for..." class="min-w-0 bg-grey-light rounded-l flex-grow p-2 md:p-3 lg:p-4"/>
             <button type="button" class="inline-block bg-red text-white text-bold uppercase tracking-wide p-2 md:p-3 lg:p-4 rounded-r">Search</button>
           </div>
         </hero-box>
       </section>
       <section class="px-4 py-8 md:px-8">
-        <ais-results :results-per-page="4" :stack="true" class="sm:flex flex-wrap items-stretch">
+        <ais-results :results-per-page="12" :stack="true" class="sm:flex flex-wrap items-stretch">
           <template slot-scope="{ result }">
             <store-preview :store="result"/>
           </template>
