@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-grey-light p-8 md:py-16">
-    <section class="md:flex mx-auto w-full max-w-lg">
-      <div class="md:w-1/3 md:flex flex-col items-center pb-8 md:pb-0">
+    <section class="md:flex mx-auto w-full max-w-xl">
+      <div class="md:w-1/4 md:flex flex-col items-center pb-8 md:pb-0">
         <div>
           <h1 class="text-semibold font-serif">by 3xW</h1>
           <ul class="list-reset">
@@ -20,7 +20,7 @@
           </ul>
         </div>
       </div>
-      <div class="md:w-1/3 md:flex flex-col items-center pb-8 md:pb-0">
+      <div class="md:w-1/4 md:flex flex-col items-center pb-8 md:pb-0">
         <div>
           <p class="uppercase tracking-wide leading-looser">Navigation</p>
           <ul class="list-reset">
@@ -39,7 +39,23 @@
           </ul>
         </div>
       </div>
-      <div class="md:w-1/3 md:flex flex-col items-center">
+      <div class="md:w-1/4 md:flex flex-col items-center pb-8 md:pb-0">
+        <div>
+          <p class="uppercase tracking-wide leading-looser">Find new favourites</p>
+          <ul class="list-reset">
+            <li class="my-4">
+              <nuxt-link to="/brunch" class="no-underline text-grey-darkest">Brunch</nuxt-link>
+            </li>
+            <li class="my-4">
+              <nuxt-link to="/lunch" class="no-underline text-grey-darkest">Lunch</nuxt-link>
+            </li>
+            <li class="my-4">
+              <nuxt-link to="/coffee" class="no-underline text-grey-darkest">Coffee</nuxt-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="md:w-1/4 md:flex flex-col items-center">
         <div>
           <p class="uppercase tracking-wide leading-looser">Find local alternatives</p>
           <ul class="list-reset">
